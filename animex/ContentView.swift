@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+	
+	@StateObject var vm = HomeViewModal()
+	
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+		VStack {
+			
+			HomeView(vm: vm)
+			
+		}
     }
 }
 
